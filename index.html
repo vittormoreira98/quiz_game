@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Formulário de Apelido</title>
+	<style>
+		body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			margin: 0;
+		}
+		.formulario {
+			text-align: center;
+		}
+		.campo-input {
+			padding: 10px;
+			font-size: 18px;
+			border: 2px solid #ccc;
+			border-radius: 5px;
+			width: 300px;
+		}
+		.botao-enviar {
+			margin-top: 10px;
+			padding: 10px 20px;
+			font-size: 16px;
+			background-color: #007bff;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		.botao-enviar:hover {
+			background-color: #0056b3;
+		}
+	</style>
+</head>
+<body>
+	<div class="formulario">
+		<h1>Digite seu apelido</h1>
+		<form id="meuFormulario" method="post" action="/salvar_apelido">
+			<input type="text" class="campo-input" id="apelido" name="apelido" placeholder="Seu Apelido" required>
+			<br>
+			<button type="submit" class="botao-enviar">Enviar</button>
+		</form>
+		
+	</div>
+
+	<script>
+		// JavaScript para lidar com o envio do formulário
+		document.getElementById("meuFormulario").addEventListener("submit", function(event) {
+			event.preventDefault();
+			var apelido = document.getElementById("apelido").value;
+			
+		});
+	</script>
+</body>
+</html>
